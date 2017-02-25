@@ -58,8 +58,9 @@ true
 
 Como na assinatura que analisamos anteriormente a função `f` recebeu um parâmetro `a`, do tipo `Object` e retornou outra função. Essa recebe um parâmetro `b`, do tipo `Number` e irá retornar em `c` um valor `Boolean`, para testar se a idade é maior ou igual a 18. 
 
+<br>
 
-Vamos pegar um exemplo bem simples:
+Agora vamos pegar um exemplo bem simples já com JavaScript:
 
 ```js
 
@@ -67,7 +68,11 @@ const fn = ( x ) => !( x % 2 )
 
 ```
 
-Com certeza você já deve saber para que serve essa função né???
+<br>
+
+>**Com certeza você já deve saber para que serve essa função né???**
+
+<br>
 
 Ótimo! Então vamos analisar sua assinatura:
 
@@ -114,6 +119,63 @@ equals :: Setoid a => a ~> a -> Boolean
 ```
 
 
+E isso me incentivou a querer usar essa forma de "descrever" uma função, por isso criamos um projetinho para testar essas assinaturas de forma bem simples.
+
+<br>
+
+Por exemplo:
+
+```js
+const test = require('./testSignature')
+
+const { fn, signature } = require('./actions/isEven')
+
+console.log('test: ', test(signature, [4], fn))
+```
+
+<br>
+Para que isso funcione precisamos modularizar as funções com esse padrão:
+<br>
+
+```js
+const fn = ( x ) => !( x % 2 )
+const signature = `Number -> Boolean`
+
+module.exports = { fn, signature }
+```
+
+
+> E pronto! 
+
+
+O módulo que faz isso acontecer, ainda está em desevolvimento pois é uma Prova de Conceito, é esse aqui:
+
+```js
+
+const TYPES = require( './types' )
+
+const signature = ( anotattion ) => anotattion.split( ' -> ' )
+
+const check = ( test, type ) => test( type )
+
+const checkType = ( TYPES, typeIn ) => 
+  ( type, i ) => check( TYPES[typeIn], type )
+
+const checkThis = ( data, TYPES, typeIn ) => 
+  data.map( checkType( TYPES, typeIn ) )
+
+const checkSignature = ( anotattion = [], data = [], fn ) => {
+  const [ typeIn, typeOut ] = signature( anotattion )
+  const computed = fn( ...data )
+  const _in = checkThis( data, TYPES, typeIn )
+  const _out = checkThis( [computed], TYPES, typeOut )
+
+  return { _in, _out }
+}
+
+module.exports = checkSignature
+
+```
 
 ## Embasamento Teórico
 
