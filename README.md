@@ -12,8 +12,7 @@ Vamos ver o que a Wikipedia nos diz:
 
 > A function signature consists of the function prototype. It specifies the general information about a function like the name, scope and parameters.
 
-fonte: [[https://en.wikipedia.org/wiki/Type_signature](https://en.wikipedia.org/wiki/Type_signature)]([https://en.wikipedia.org/wiki/Type_signature](https://en.wikipedia.org/wiki/Type_signature))
-
+fonte: [https://en.wikipedia.org/wiki/Type_signature](https://en.wikipedia.org/wiki/Type_signature)
 <br>
 
 
@@ -116,8 +115,11 @@ equals :: Setoid a => a ~> a -> Boolean
 
 
 
+## Embasamento Teórico
 
-[https://en.wikipedia.org/wiki/Arrow_(symbol)](https://en.wikipedia.org/wiki/Arrow_(symbol))
+- [https://en.wikipedia.org/wiki/Type_signature](https://en.wikipedia.org/wiki/Type_signature)
+- [https://en.wikipedia.org/wiki/Arrow_(symbol)](https://en.wikipedia.org/wiki/Arrow_(symbol))
+- [https://en.wikipedia.org/wiki/Function_(mathematics)](https://en.wikipedia.org/wiki/Function_(mathematics))
 
 
 
