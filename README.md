@@ -144,9 +144,11 @@ const signature = `Number -> Boolean`
 module.exports = { fn, signature }
 ```
 
+<br>
 
-> E pronto! 
+> **E pronto! **
 
+<br>
 
 O módulo que faz isso acontecer, ainda está em desevolvimento pois é uma Prova de Conceito, é esse aqui:
 
@@ -176,6 +178,7 @@ const checkSignature = ( anotattion = [], data = [], fn ) => {
 module.exports = checkSignature
 
 ```
+
 
 ## Embasamento Teórico
 
