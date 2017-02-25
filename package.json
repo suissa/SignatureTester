@@ -1,0 +1,25 @@
+{
+  "name": "universal-converter",
+  "version": "1.0.0",
+  "description": "Um dos conteúdos mais básicos que encontramos em nossos estudos é a conversão de unidades de medida.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suissa/UniversalConverter.git"
+  },
+  "author": "Suissa",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/suissa/UniversalConverter/issues"
+  },
+  "homepage": "https://github.com/suissa/UniversalConverter#readme",
+  "dependencies": {
+    "chai": "^3.5.0"
+  }
+}
