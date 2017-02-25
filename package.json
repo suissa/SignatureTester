@@ -1,0 +1,25 @@
+{
+  "name": "signature-tester",
+  "version": "1.0.0",
+  "description": "Teste via assinatura da funcão",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suissa/SignatureTester.git"
+  },
+  "author": "Suissa",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/suissa/SignatureTester/issues"
+  },
+  "homepage": "https://github.com/suissa/SignatureTester#readme",
+  "dependencies": {
+    "chai": "^3.5.0"
+  }
+}
