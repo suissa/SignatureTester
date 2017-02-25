@@ -126,11 +126,13 @@ E isso me incentivou a querer usar essa forma de "descrever" uma função, por i
 Por exemplo:
 
 ```js
+
 const test = require('./testSignature')
 
 const { fn, signature } = require('./actions/isEven')
 
 console.log('test: ', test(signature, [4], fn))
+
 ```
 
 <br>
@@ -138,10 +140,12 @@ Para que isso funcione precisamos modularizar as funções com esse padrão:
 <br>
 
 ```js
+
 const fn = ( x ) => !( x % 2 )
 const signature = `Number -> Boolean`
 
 module.exports = { fn, signature }
+
 ```
 
 <br>
@@ -176,6 +180,42 @@ const checkSignature = ( anotattion = [], data = [], fn ) => {
 }
 
 module.exports = checkSignature
+
+```
+
+
+## Exemplos
+
+
+- toString:
+```js
+
+const fn = ( x ) => x.toString()
+const signature = `* -> String`
+
+module.exports = { fn, signature }
+
+```
+
+- toDouble:
+```js
+
+const fn = ( x ) => x * 2
+const signature = `Number -> Number`
+
+module.exports = { fn, signature }
+
+```
+
+- sum:
+```js
+
+const sum = ( acc, cur ) => acc + cur
+
+const fn = ( arr ) => arr.reduce( sum )
+const signature = `Array -> Number`
+
+module.exports = { fn, signature }
 
 ```
 
