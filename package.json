@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "npx mocha tests"
+    "test": "npx mocha 'test/**/*.js'"
   },
   "repository": {
     "type": "git",
