@@ -7,7 +7,7 @@ module.exports = {
   'Symbol': ( val ) => typeof val === 'symbol',
   'Function': ( val ) => typeof val === 'function',
   'Object': ( val ) => typeof val === 'object',
-  'Array': ( val ) => val instanceof Array,
+  'Array': ( val ) => typeof val === 'array',
   '*': ( val ) => typeof val === 'undefined' ||
                   typeof val === 'object' ||
                   typeof val === 'boolean' ||

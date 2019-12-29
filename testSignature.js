@@ -7,7 +7,7 @@ const check = (test, type) => test(type)
 const checkType = (TYPES, typeIn) => (type, i) => check(TYPES[typeIn], type)
 
 const checkThis = (data, TYPES, typeIn) => 
-  ( typeIn === 'Array' ) 
+  (typeIn === 'Array')
     ? [checkType(TYPES, typeIn)(data)]
     : data.map(checkType(TYPES, typeIn))
 
