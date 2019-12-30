@@ -7,18 +7,18 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "npx mocha tests"
+    "test": "npx mocha 'test/**/*.js'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/suissa/SignatureTester.git"
+    "url": "git+https://github.com/lukaswilkeer/SignatureTester"
   },
   "author": "Suissa",
   "license": "WTFPL",
   "bugs": {
-    "url": "https://github.com/suissa/SignatureTester/issues"
+    "url": "https://github.com/lukaswilkeer/SignatureTester"
   },
-  "homepage": "https://github.com/suissa/SignatureTester#readme",
+  "homepage": "https://github.com/lukaswilkeer/SignatureTester#readme",
   "dependencies": {},
   "devDependencies": {
     "chai": "^3.5.0",
