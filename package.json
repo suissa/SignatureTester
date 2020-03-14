@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lukaswilkeer/SignatureTester"
+    "url": "git+https://github.com/suissa/UniversalConverter.git"
   },
   "author": "Suissa",
   "license": "WTFPL",
   "bugs": {
-    "url": "https://github.com/lukaswilkeer/SignatureTester"
+    "url": "https://github.com/suissa/SignatureTester"
   },
-  "homepage": "https://github.com/lukaswilkeer/SignatureTester#readme",
+  "homepage": "https://github.com/suissa/SignatureTester#readme",
   "dependencies": {
     "faker": "^4.1.0",
     "lodash": "^4.17.15"
