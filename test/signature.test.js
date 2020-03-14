@@ -7,11 +7,15 @@ const checkSignature = require('../lib/testSignature.js')
 describe('Signatures', () => {
 	it('should test the signature', (done) => {
 		const annotation = 'String -> String -> String'
-		const data = []
 		const fn = (str1, str2) => `${str1}.${str2}`
 
-		const result = checkSignature(annotation, data, fn)
-		expect(result._out).to.be.a('string')
+		const result = checkSignature(annotation, fn)
+
+		expect(result._in).to.be.an('array')
+		expect(result._in).to.have.length(2)
+
+		expect(result._out).to.be.a('array')
+		expect(result._out).to.have.length(1)
 		done()
 	})
 })
