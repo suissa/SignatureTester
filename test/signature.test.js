@@ -4,8 +4,8 @@ const { expect } = require('chai')
 const tester = require('../lib/index.js')
 const checkSignature = require('../lib/testSignature.js')
 
-describe('Signatures', () => {
-	it('should test the signature', (done) => {
+describe('Should test signatures', () => {
+	it('String -> String -> String', (done) => {
 		const annotation = 'String -> String -> String'
 		const fn = (str1, str2) => `${str1}.${str2}`
 
@@ -16,6 +16,17 @@ describe('Signatures', () => {
 
 		expect(result._out).to.be.a('array')
 		expect(result._out).to.have.length(1)
+		done()
+	})
+
+	it('String -> Number -> Object', (done) => {
+		const annotation = 'String -> Number -> Object'
+		const fn = (str, index) => `{${index}: ${str}}`
+
+		const result = checkSignature(annotation, fn)
+
+		expect(result._out).to.be.a('array')
+		expect(result._out[0]).to.be.true
 		done()
 	})
 })
