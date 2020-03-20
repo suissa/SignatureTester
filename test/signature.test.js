@@ -20,8 +20,14 @@ describe('Should test signatures', () => {
 	})
 
 	it('String -> Number -> Object', (done) => {
-		const annotation = 'String -> Number -> Object'
-		const fn = (str, index) => `{${index}: ${str}}`
+		const annotation = 'Number -> String -> Object'
+
+		const fn = (index, str) => {
+			const obj = {}
+			obj[index] = str
+
+			return obj
+		}
 
 		const result = checkSignature(annotation, fn)
 
@@ -31,7 +37,7 @@ describe('Should test signatures', () => {
 	})
 })
 
-describe.skip('Should parse the signature annotation', () => {
+describe('Should parse the signature annotation', () => {
 	it('should parse the annotation to types', (done) => {
 		const file = fs.readFileSync(`${process.cwd()}/test/__mocks__/description.js`)
 
@@ -42,5 +48,5 @@ describe.skip('Should parse the signature annotation', () => {
 	})
 
 
-	it('should parse every annotation to types')
+	it.skip('should parse every annotation to types')
 })
