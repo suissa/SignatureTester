@@ -1,41 +1,31 @@
 {
-<<<<<<< HEAD
   "name": "signature-tester",
   "version": "1.0.0",
   "description": "Teste via assinatura da funcão",
-=======
-  "name": "universal-converter",
-  "version": "1.0.0",
-  "description": "Um dos conteúdos mais básicos que encontramos em nossos estudos é a conversão de unidades de medida.",
->>>>>>> 8219ee17a83dc40bf961531dc8be7b8f6b0620f7
   "main": "index.js",
   "directories": {
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha tests"
+    "test": "npx mocha 'test/**/*.js'"
   },
   "repository": {
     "type": "git",
-<<<<<<< HEAD
-    "url": "git+https://github.com/suissa/SignatureTester.git"
-=======
     "url": "git+https://github.com/suissa/UniversalConverter.git"
->>>>>>> 8219ee17a83dc40bf961531dc8be7b8f6b0620f7
   },
   "author": "Suissa",
   "license": "WTFPL",
   "bugs": {
-<<<<<<< HEAD
-    "url": "https://github.com/suissa/SignatureTester/issues"
+    "url": "https://github.com/suissa/SignatureTester"
   },
   "homepage": "https://github.com/suissa/SignatureTester#readme",
-=======
-    "url": "https://github.com/suissa/UniversalConverter/issues"
-  },
-  "homepage": "https://github.com/suissa/UniversalConverter#readme",
->>>>>>> 8219ee17a83dc40bf961531dc8be7b8f6b0620f7
   "dependencies": {
-    "chai": "^3.5.0"
+    "faker": "^4.1.0",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^6.2.2",
+    "sinon": "^8.0.1"
   }
 }
